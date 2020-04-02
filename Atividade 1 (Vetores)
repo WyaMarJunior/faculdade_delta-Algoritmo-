@@ -8,7 +8,7 @@ public class MyClass {
       int o=9;
       int z=x*y;
       int p=i*a;
-      int k=t*o     
+      int k=t*o;     
 
       System.out.println("PROD = " + z);
       System.out.println("PROD = " + p);

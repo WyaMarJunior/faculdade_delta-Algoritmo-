@@ -31,6 +31,34 @@ Bubble Sort é um algoritmo de ordenação, Se o objetivo é ordenar os valores 
 
 9 - Binômio de Newton -  O binômio de Newton é um método simples que permite determinar a enésima potência de um binômio. O desenvolvimento do binômio de Newton em alguns casos é bastante simples. Podendo ser feita multiplicando-se diretamente todos os termos. Contudo, nem sempre é conveniente utilizar esse método, pois de acordo com o expoente, os cálculos ficarão extremamente trabalhosos.
 
+10 - Descreva o Algoritmo que calcule o MMC:
+O MMC entre dois números naturais (vou me limitar ao conjunto dos números naturais) é o menor número natural que é múltiplo de ambos os números. Exemplos:
+1.	o MMC de 24 e 12 é igual a 24;
+2.	o MMC de 36 e 14 é igual a 252;
+3.	o MMC de 11 e 9 é igual a 99.
+Uma das maneiras de calcular o MMC envolve a fatoração dos números em fatores primos, conforme o exemplo da imagem a seguir, que emprega um dispositivo prático, geralmente ensinado no ensino fundamental, para computar o MMC de 60 e 100 (cujo resultado é 300). Não irei detalhar como funciona o dispositivo, pois não é o objetivo da postagem.
+ Dispositivo prático para calcular o MMC
+Outro método seria fatorando os números em potências inteiras de números primos e multiplicando apenas as maiores potências de cada primo:
+•	60=22×3×560=22×3×5
+•	100=22×52100=22×52
+A maior potência de 22 é 2222. A maior potência de 33 é 33. A maior potência de 55 é 5252, logo
+MMC(60,100)=22×3×52=300MMC⁡(60,100)=22×3×52=300
+O problema dos métodos anteriores é que a fatoração de números inteiros é um problema NP, não existindo um algoritmo que possa fazer isso de maneira eficiente.
+
+11 - Descreva o Algoritmo que calcule o MDC:
+O algoritmo de Euclides é [1][2]
+mdc(a,b)={a,seb=0mdc(b,a%b),caso contráriomdc⁡(a,b)={a,seb=0mdc⁡(b,a%b),caso contrário
+onde a>0a>0 e b≥0b≥0 e a,b∈Za,b∈Z.
+O primeiro caso é o caso base, isto é, se bb é zero, então o MDC será aa. Isso faz sentido, pois zero é divisível por qualquer número inteiro (exceto zero).
+O segundo caso é a solução recursiva: o MDC entre aa e bb é igual ao MDC entre bb e o resto da divisão de aa por bb.
+
+12 - Descreva o Algoritmo de números perfeitos:
+um número perfeito é um número inteiro para o qual a soma de todos os seus divisores positivos próprios (excluindo ele mesmo) é igual ao próprio número.
+Por exemplo 6 é um número perfeito, pois 1 + 2 + 3 = 6
+O número 28 também é um número perfeito pois temos que seus divisores : 1 + 2 + 4 + 7 + 14 = 28
+O número 496 é outro número perfeito visto que: 1 + 2 + 4 + 8 + 16 + 31 + 62 + 124 + 248 = 496
+
+
 13 - Descreva o Algoritmo de números primos e o crivo desenvolvido por Eratóstenes
 Eratóstenes foi um matemático grego que viveu entre os anos 276 a.C. até 194 a.C.
 Ele desenvolveu uma tabela, chamada de “Crivo de Eratóstenes”, onde ele conseguiu determinar, não com uma fórmula, mas com uma tabela os números naturais primos, no nosso exemplo do 0 até o 100; mas que na teoria pode ser feito para todos os números primos; porém, o inconveniente é que quanto maior for o nº primo, mais difícil de aplicar o Crivo de Eratóstenes,
